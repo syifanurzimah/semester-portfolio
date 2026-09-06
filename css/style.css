@@ -1,0 +1,715 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8f9;
+    color: #4a3f42;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    width: 100%;
+    padding: 22px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #fff8f9;
+}
+
+nav h2 {
+    color: #c76f88;
+    font-size: 25px;
+}
+
+nav div {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a3f42;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c76f88;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 80vh;
+    padding: 70px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background:
+        radial-gradient(circle at 10% 20%, #f9dce4 0%, transparent 25%),
+        radial-gradient(circle at 90% 80%, #f4e0d6 0%, transparent 25%);
+}
+
+.hero-text {
+    max-width: 570px;
+}
+
+.hero-text > p:first-child {
+    color: #c76f88;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.05;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #c76f88;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hero-text > p:last-of-type {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    border: none;
+    padding: 14px 25px;
+
+    background: #c76f88;
+    color: white;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(199, 111, 136, 0.25);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+.task-button {
+    display: inline-block;
+    text-decoration: none;
+
+    border: none;
+    padding: 14px 25px;
+
+    background: #c76f88;
+    color: white;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(199, 111, 136, 0.25);
+
+    transition: 0.3s;
+}
+
+.task-button:hover {
+    transform: translateY(-3px);
+    color: white;
+}
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-box {
+    width: 330px;
+    height: 400px;
+
+    background: #f2d9df;
+
+    border: 10px solid white;
+
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 20px 40px rgba(80, 50, 60, 0.15);
+
+    transform: rotate(3deg);
+
+    position: relative;
+}
+
+.photo-box p {
+    color: #a96b7c;
+    font-size: 18px;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+
+
+/* dekorasi */
+
+.photo-box::before {
+    content: "✦";
+    position: absolute;
+
+    top: -35px;
+    right: -30px;
+
+    font-size: 40px;
+    color: #c76f88;
+}
+
+.photo-box::after {
+    content: "♡";
+    position: absolute;
+
+    bottom: -30px;
+    left: -30px;
+
+    font-size: 40px;
+    color: #c76f88;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 90px 8%;
+    text-align: center;
+    background: white;
+}
+
+.about > p {
+    color: #c76f88;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin: 15px 0 45px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+
+    padding: 30px 25px;
+
+    background: #fff8f9;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(80, 50, 60, 0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #c76f88;
+}
+
+.card p {
+    line-height: 1.6;
+    color: #75696c;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav div {
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .photo-box {
+        width: 270px;
+        height: 330px;
+    }
+}
+
+
+/* =========================
+   TASKS PAGE
+========================= */
+
+.tasks-page {
+    min-height: 85vh;
+    padding: 80px 8%;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 10% 20%, #f9dce4 0%, transparent 25%),
+        radial-gradient(circle at 90% 80%, #f4e0d6 0%, transparent 25%);
+}
+
+.section-title {
+    color: #c76f88;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.tasks-page h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.intro {
+    color: #75696c;
+    margin-bottom: 45px;
+}
+
+.task-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.task-card {
+    width: 300px;
+    padding: 30px;
+    text-align: left;
+
+    background: white;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(80, 50, 60, 0.08);
+
+    transition: 0.3s;
+}
+
+.task-card:hover {
+    transform: translateY(-8px);
+}
+
+.task-card span {
+    color: #c76f88;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.task-card h2 {
+    margin: 15px 0 12px;
+    font-size: 22px;
+}
+
+.task-card p {
+    color: #75696c;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.task-card a {
+    color: #c76f88;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* =========================
+   PROFILE PAGE
+========================= */
+
+.profile-page {
+    min-height: 85vh;
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 70px;
+
+    background:
+        radial-gradient(circle at 10% 20%, #f9dce4 0%, transparent 25%),
+        radial-gradient(circle at 90% 80%, #f4e0d6 0%, transparent 25%);
+}
+
+.profile-photo {
+    width: 330px;
+    height: 400px;
+
+    background: #f2d9df;
+    padding: 10px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 20px 40px rgba(80, 50, 60, 0.15);
+
+    transform: rotate(-3deg);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    display: block;
+}
+
+.profile-info {
+    max-width: 550px;
+}
+
+.profile-info h1 {
+    font-size: 42px;
+    margin: 15px 0 20px;
+}
+
+.profile-info h1 span {
+    color: #c76f88;
+}
+
+.profile-info > p:not(.section-title) {
+    color: #75696c;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.profile-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.profile-details div {
+    background: white;
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(80, 50, 60, 0.06);
+}
+
+.profile-details strong {
+    color: #c76f88;
+    font-size: 14px;
+}
+
+.profile-details p {
+    margin-top: 7px;
+    color: #75696c;
+}
+
+
+/* PROFILE - HP */
+
+@media (max-width: 768px) {
+
+    .profile-page {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 270px;
+        height: 330px;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-page {
+    min-height: 85vh;
+    padding: 80px 8%;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 10% 20%, #f9dce4 0%, transparent 25%),
+        radial-gradient(circle at 90% 80%, #f4e0d6 0%, transparent 25%);
+}
+
+.contact-page h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.contact-intro {
+    color: #75696c;
+    line-height: 1.7;
+    margin-bottom: 45px;
+}
+
+.contact-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    width: 260px;
+    padding: 30px 25px;
+
+    background: white;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(80, 50, 60, 0.08);
+
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+}
+
+.contact-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contact-card h2 {
+    color: #c76f88;
+    margin: 10px 0;
+}
+
+.contact-card p {
+    color: #75696c;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-card a {
+    color: #c76f88;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* =========================
+   ARTICLE PAGE
+========================= */
+
+.article-page {
+    min-height: 85vh;
+    padding: 70px 8%;
+
+    background:
+        radial-gradient(circle at 10% 20%, #f9dce4 0%, transparent 25%),
+        radial-gradient(circle at 90% 80%, #f4e0d6 0%, transparent 25%);
+}
+
+
+/* HEADER ARTIKEL */
+
+.article-header {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.article-header h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.article-meta {
+    color: #75696c;
+    font-size: 14px;
+}
+
+
+/* ISI ARTIKEL */
+
+.article-content {
+    max-width: 850px;
+    margin: 0 auto;
+
+    background: white;
+    padding: 50px 60px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(80, 50, 60, 0.08);
+}
+
+.article-content p {
+    color: #5f5558;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+
+.article-content h2 {
+    color: #c76f88;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.article-content h3 {
+    color: #4f4548;
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.article-content strong {
+    color: #c76f88;
+}
+
+
+/* TOMBOL KEMBALI */
+
+.article-footer {
+    margin-top: 45px;
+    padding-top: 25px;
+
+    border-top: 1px solid #f0dfe4;
+}
+
+.article-footer a {
+    color: #c76f88;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ARTIKEL - HP */
+
+@media (max-width: 768px) {
+
+    .article-page {
+        padding: 50px 5%;
+    }
+
+    .article-header h1 {
+        font-size: 34px;
+    }
+
+    .article-content {
+        padding: 30px 25px;
+    }
+
+    .article-content h2 {
+        font-size: 24px;
+    }
+
+    .article-content h3 {
+        font-size: 20px;
+    }
+}
+
+
+/* =========================
+   ARTICLE IMAGE
+========================= */
+
+.article-image {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.article-image img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(80, 50, 60, 0.10);
+}
